@@ -30,3 +30,7 @@ sudo -H apt-get install -y nodejs
 # Install build-tools
 echo 'Installing build-tools'
 sudo -H apt-get install -y build-essential
+
+# Set up NPM
+# (otherwise you need to deal with lots of sudo and/or chowning)
+echo prefix = ~/.node >> ~/.npmrc

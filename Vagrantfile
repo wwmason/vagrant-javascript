@@ -30,4 +30,6 @@ Vagrant.configure("2") do |config|
                           "/home/vagrant/workspace"
 
   config.vm.provision :shell, privileged: false, path: "bootstrap.sh"
+
+  config.vm.network "forwarded_port", guest: 5000, host: 5000, host_ip: "127.0.0.1"
 end
